@@ -10,9 +10,9 @@ export const server = {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(body)
+            body: JSON.stringify(body),
         });
 
-        return res.json() as Promise<{data: TData}>;
-    }
+        return res.json() as Promise<{ data: TData }>;
+    },
 };
