@@ -1,8 +1,21 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is the React frontend for the TinyHouse app
+
+## Overall Structure
+
+Bootstrapped with create-react-app --template typescript
+Sections folder represents the several components. Each component includes a storybook file and tests.
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm run codegen:schema`
+
+Generates a schema.json file in the root of the application mirroring the graphql schema detected from the api.
+
+### `codegen:generate`
+
+Uses a generated schema.json to auto create typescript types for use in our components.
 
 ### `npm start`
 
@@ -36,9 +49,3 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
