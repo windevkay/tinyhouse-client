@@ -10,9 +10,8 @@ import { LOG_IN } from '../../lib/graphql/mutations';
 import { AuthUrl as AuthUrlData } from '../../lib/graphql/queries/AuthUrl/__generated__/AuthUrl';
 import { LogIn as LogInData, LogInVariables } from '../../lib/graphql/mutations/Login/__generated__/LogIn';
 
-//import googleLogo from './assets/google_logo.jpg';
-/* eslint-disable */
-const googleLogo = require('./assets/google_logo.jpg');
+import googleLogo from './assets/google_logo.jpg';
+
 import { ErrorBanner } from '../../lib/components';
 import { displayErrorMessage, displaySuccessNotification } from '../../lib/utils';
 
