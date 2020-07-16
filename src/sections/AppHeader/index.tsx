@@ -6,7 +6,9 @@ import { MenuItems } from './components';
 
 import { Viewer } from '../../lib/types';
 
-import logo from './assets/tinyhouse-logo.png';
+//import logo from './assets/tinyhouse-logo.png';
+// eslint-disable-next-line
+const logo = require('./assets/tinyhouse-logo.png');
 
 interface Props {
     viewer: Viewer;

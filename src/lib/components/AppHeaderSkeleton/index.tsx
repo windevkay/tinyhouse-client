@@ -1,7 +1,9 @@
 import React from 'react';
 import { Layout } from 'antd';
 
-import logo from './assets/tinyhouse-logo.png';
+//import logo from './assets/tinyhouse-logo.png';
+// eslint-disable-next-line
+const logo = require('./assets/tinyhouse-logo.png');
 
 const { Header } = Layout;
 
