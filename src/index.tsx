@@ -12,7 +12,7 @@ import { Viewer } from './lib/types';
 import { LOG_IN } from './lib/graphql/mutations';
 import { LogIn as LogInData, LogInVariables } from './lib/graphql/mutations/Login/__generated__/LogIn';
 
-import { Home, Host, Listing, Listings, Login, NotFound, User, AppHeader } from './sections';
+import { Home, Host, Listing, Listings, Login, NotFound, User, AppHeader, Stripe } from './sections';
 import { AppHeaderSkeleton, ErrorBanner } from './lib/components';
 
 //create apollo client
@@ -87,7 +87,16 @@ const App = () => {
                     <Route exact path="/listing/:id" component={Listing} />
                     <Route exact path="/listings/:location?" component={Listings} />
                     <Route exact path="/login" render={(props) => <Login {...props} setViewer={setViewer} />} />
-                    <Route exact path="/user/:id" render={(props) => <User {...props} viewer={viewer} />} />
+                    <Route
+                        exact
+                        path="/stripe"
+                        render={(props) => <Stripe {...props} viewer={viewer} setViewer={setViewer} />}
+                    />
+                    <Route
+                        exact
+                        path="/user/:id"
+                        render={(props) => <User {...props} viewer={viewer} setViewer={setViewer} />}
+                    />
                     <Route component={NotFound} />
                 </Switch>
             </Layout>
